@@ -3,7 +3,7 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-def Sum_of_digits(num):
+def sum_of_digits(num):
     sum = 0
     for char in num:
         if char != '.' and char != '-' and char != ',':
@@ -11,4 +11,4 @@ def Sum_of_digits(num):
     return sum
 
 number = input('Введите вещественное число: ')
-print(f'Сумма цифр введённого числа: {Sum_of_digits(number)}')
+print(f'Сумма цифр введённого числа: {sum_of_digits(number)}')

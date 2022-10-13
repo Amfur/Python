@@ -2,7 +2,7 @@
 # Пример:
 # пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-def Set_of_prods(finish_num):
+def set_of_prods(finish_num):
     prod = 1
     prods = []
     for num in range(1, finish_num + 1):
@@ -11,4 +11,4 @@ def Set_of_prods(finish_num):
     return(prods)
 
 N = int(input('Введите число N: '))
-print(f'Набор произведений чисел от 1 до {N}: {Set_of_prods(N)}')
+print(f'Набор произведений чисел от 1 до {N}: {set_of_prods(N)}')
