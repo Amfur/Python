@@ -14,7 +14,7 @@ if len(interval) != 0:
     count = abs(int(input('Введите количество множителей: ')))
     prod = 1
     indexes = []
-    while count != 0 and len(interval) != 0:
+    while count != 0:
         elem = int(input(f'Осталось ввести: {count}\nВведите позицию элемента: '))
         if elem in range(len(interval)) and elem >= 0:
             indexes.append(elem)
