@@ -8,24 +8,26 @@ def float_list (size):
     size = abs(int(size))
     new_list = []
     for i in range(size):
-        new_list.append(random.randint(0, 10) + round(random.random(), 2))
+        new_list.append(round(random.randint(0, 10) + random.random(), 2))
     return new_list
 
 my_list = float_list(input('Размер списка: '))
 print(my_list)
 
-int_elem = None
-diff = None
+frac = None
 max = 0
+max_el = None
 min = 1
+min_el = None
 if len(my_list):
     for i in my_list:
-        int_elem = int(i)
-        diff = i - int_elem
-        if diff > max:
-            max = diff
-        if diff < min:
-            min = diff
-    print(f'Разность: {round(max-min, 2)}')
+        frac = i - int(i)
+        if frac > max:
+            max = frac
+            max_el = i
+        if frac < min:
+            min = frac
+            min_el = i
+    print(f'Максимальная дробная часть: {max_el}\nМинимсальная дробная часть: {min_el}\nРазность дробных частей: {round(max-min, 2)}')
 else:
     print('Задан пустой список')
